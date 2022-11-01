@@ -17,33 +17,60 @@ var employees = [
     {
         name: "Favour",
         salary: 2000,
-        active: false
+        active: false,
+        additional_salary: function(){
+            return this.salary + 250;
+        }
     },
     {
         name: "Choice",
         salary: 1500,
-        active: true
+        active: true,
+        additional_salary: function(){
+            return this.salary + 250;
+        }
     },
     {
         name: "Rume",
         salary: 17000,
-        active: true
+        active: true,
+        additional_salary: function(){
+            return this.salary + 250;
+        }
     },
     {
         name: "Pascal",
         salary: 20000,
-        active: true
+        active: true,
+        additional_salary: function(){
+            return this.salary + 250;
+        }
     },
     {
         name: "Adesuwa",
         salary: 2000,
-        active: false
+        active: false,
+        additional_salary: function(){
+            return this.salary + 250;
+        }
     }
 ];
 
-for(let index = 0; index < employees.length; index++){
+console.log(employees[0].additional_salary())
+
+// for(let index = 0; index < employees.length; index++){
     
-    if(employees[ index][ 'active'] == true){
-        console.log(`We have paid the sum of ${ employees[ index ][ 'salary']} to ${ employees[ index ][ 'name']}`)
+//     if(employees[ index][ 'active'] == true){
+//         console.log(`We have paid the sum of ${ employees[ index ][ 'salary']} to ${ employees[ index ][ 'name']}`)
+//     }
+// }
+
+for (let i = 0; i < employees.length; i++){
+
+    let employee = employees[ i ];
+
+    if (employee.active == false){
+        continue;
     }
+    console.log(`We have paid the sum of ${ employees[ index ][ 'salary']} to ${ employees[ index ][ 'name']}`)
 }
